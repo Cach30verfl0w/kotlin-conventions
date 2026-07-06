@@ -48,6 +48,8 @@ kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref 
 compose-multiplatform = { id = "org.jetbrains.compose", version.ref = "composeMultiplatform" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 
+android-application = { id = "com.android.application", version.ref = "androidGradle" }
+
 buildConfig = { id = "com.github.gmazzo.buildconfig", version.ref = "buildConfig" }
 gradle-compatibility = { id = "org.gradle.plugin-compatibility", version.ref = "gradle-compatibility" }
 gradle-publish = { id = "com.gradle.plugin-publish", version.ref = "gradle-publish" }

@@ -22,13 +22,22 @@ plugins {
 val projectGroup = requireNotNull(property("project.group") as? String) { "Missing project.group property" }
 val javaVersion: Int = libs.versions.jvmTarget.get().toInt()
 
-kotlin {
-    jvmToolchain(javaVersion)
+fun Provider<PluginDependency>.asLibraryProvider(): Provider<String> {
+    return map { "${it.pluginId}:${it.pluginId}.gradle.plugin:${it.version}" }
+}
+
+dependencies {
+    compileOnly(libs.plugins.kotlin.multiplatform.asLibraryProvider())
+    compileOnly(libs.plugins.mavenPublish.asLibraryProvider())
 }
 
 buildConfig {
     buildConfigField("String", "PROJECT_GROUP", "\"$projectGroup\"")
     buildConfigField("String", "PROJECT_VERSION", "\"${project.version}\"")
+}
+
+kotlin {
+    jvmToolchain(javaVersion)
 }
 
 java {

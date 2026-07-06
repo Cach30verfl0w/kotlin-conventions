@@ -1,0 +1,35 @@
+/*
+ * Copyright 2026 Cedric Hammes <contact@cach30verfl0w.net>
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package net.cacheoverflow.conventions
+
+object PluginIds {
+    const val VANNIKTECH_MAVEN_PUBLISH: String = "com.vanniktech.maven.publish"
+    const val MAVEN_PUBLISH: String = "maven-publish"
+    const val JAVA = "java"
+
+    // Kotlin
+    const val KOTLIN_JVM: String = "org.jetbrains.kotlin.jvm"
+    const val KOTLIN_MULTIPLATFORM: String = "org.jetbrains.kotlin.multiplatform"
+
+    // Android
+    const val ANDROID_LIBRARY: String = "com.android.library"
+    const val ANDROID_APPLICATION: String = "com.android.application"
+
+    // Compose
+    const val COMPOSE_COMPILER: String = "org.jetbrains.kotlin.plugin.compose"
+    const val COMPOSE_MULTIPLATFORM: String = "org.jetbrains.compose"
+}

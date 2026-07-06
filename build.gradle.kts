@@ -34,6 +34,7 @@ allprojects {
         }
 
         extensions.configure<SigningExtension> {
+            useGpgCmd()
             isRequired = isCiPipeline
         }
     }

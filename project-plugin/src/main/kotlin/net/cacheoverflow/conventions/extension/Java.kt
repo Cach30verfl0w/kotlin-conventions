@@ -25,11 +25,19 @@ import org.gradle.kotlin.dsl.getByType
 import org.jetbrains.kotlin.gradle.dsl.KotlinJvmExtension
 import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension
 
+/**
+ * @author Cedric Hammes
+ * @since  06/07/2026
+ */
 fun Int.toJavaVersion(): JavaVersion {
     val javaVersion = JavaVersion.entries.find { it.majorVersion.toIntOrNull() == this@toJavaVersion }
     return requireNotNull(javaVersion) { "Invalid Java major version: $this" }
 }
 
+/**
+ * @author Cedric Hammes
+ * @since  06/07/2026
+ */
 fun Project.configureJava(version: Int) = with(project.pluginManager) {
     withPlugin(PluginIds.JAVA) {
         logger.info("Found Java plugin, adjusting Java version")

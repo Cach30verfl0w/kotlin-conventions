@@ -18,6 +18,7 @@ package net.cacheoverflow.conventions
 
 object PluginIds {
     const val VANNIKTECH_MAVEN_PUBLISH: String = "com.vanniktech.maven.publish"
+    const val DETEKT: String = "io.gitlab.arturbosch.detekt"
     const val MAVEN_PUBLISH: String = "maven-publish"
     const val JAVA = "java"
 

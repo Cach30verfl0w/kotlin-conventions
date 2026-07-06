@@ -29,6 +29,7 @@ fun Provider<PluginDependency>.asLibraryProvider(): Provider<String> {
 dependencies {
     compileOnly(libs.plugins.kotlin.multiplatform.asLibraryProvider())
     compileOnly(libs.plugins.mavenPublish.asLibraryProvider())
+    compileOnly(libs.plugins.detekt.asLibraryProvider())
 }
 
 buildConfig {

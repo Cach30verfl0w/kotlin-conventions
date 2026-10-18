@@ -223,6 +223,7 @@ inline fun Project.withWeb(crossinline config: KotlinJsTargetDsl.() -> Unit = {}
  * @param namespace the Android namespace for the library, defaulting to the project's group
  * @param compileSdk the compile SDK version, defaulting to the compile Sdk version in libs.versions.toml
  * @param minSdk the minimum SDK version, defaulting to the min Sdk version in libs.versions.toml
+ * @param javaVersion the JVM target version, defaulting to the JVM target in libs.versions.toml
  * @param config additional configuration block for the [KotlinAndroidTarget]
  *
  * @author Cedric Hammes
@@ -232,12 +233,16 @@ inline fun Project.withAndroidLibrary(
     namespace: String = project.group.toString(),
     compileSdk: Provider<Int> = getVersionProvider("android.compileSdk").map { it.toInt() },
     minSdk: Provider<Int> = getVersionProvider("android.minSdk").map { it.toInt() },
+    javaVersion: Provider<String> = getVersionProvider("jvmTarget"),
     crossinline config: KotlinMultiplatformAndroidLibraryTarget.() -> Unit = {}
 ) = with(kotlin) {
     extensions.configure<KotlinMultiplatformAndroidLibraryTarget>("androidLibrary") {
         this.namespace = namespace
         this.compileSdk = compileSdk.get()
         this.minSdk = minSdk.get()
+        compilerOptions {
+            jvmTarget.set(JvmTarget.fromTarget(javaVersion.get()))
+        }
         config()
 
         androidResources.enable = true

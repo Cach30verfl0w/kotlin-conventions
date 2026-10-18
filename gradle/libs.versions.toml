@@ -1,12 +1,15 @@
 [versions]
 kotlin-conventions = "1.0.0"
 notescure = "1.0.0"
+netmonitor = "1.1.0" # https://github.com/Cach30verfl0w/netmonitor-kmp/releases
 
 kotlin = "2.4.21" # https://github.com/JetBrains/kotlin/releases
 jvmTarget = "25"
 
+kotlinx-coroutines = "1.11.0" # https://github.com/Kotlin/kotlinx.coroutines/releases
 kotlinx-collections-immutable = "0.5.2" # https://github.com/Kotlin/kotlinx.collections.immutable/releases
 kotlinx-serialization = "1.11.0" # https://github.com/Kotlin/kotlinx.serialization/releases
+comInterop = "1.2.1" # https://github.com/karmakrafts/COMInterop/releases
 camerax = "1.6.2" # https://developer.android.com/jetpack/androidx/releases/camera
 opencv = "4.14.0" # https://github.com/opencv/opencv/releases
 zxing = "3.1.1" # https://github.com/zxing-cpp/zxing-cpp/releases
@@ -50,6 +53,7 @@ androidx-core = { group = "androidx.core", name = "core", version.ref = "android
 androidx-lifecycle-navigation3 = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-viewmodel-navigation3", version.ref = "androidx-lifecycle" }
 compose-resources = { group = "org.jetbrains.compose.components", name = "components-resources", version.ref = "composeMultiplatform" }
 compose-uiTooling-preview = { group = "org.jetbrains.compose.ui", name = "ui-tooling-preview", version.ref = "composeMultiplatform" }
+comInterop-core = { group = "dev.karmakrafts.cominterop", name = "cominterop-core", version.ref = "comInterop" }
 
 coil3-core = { group = "io.coil-kt.coil3", name = "coil-core", version.ref = "coil3" }
 coil3-compose = { group = "io.coil-kt.coil3", name = "coil-compose", version.ref = "coil3" }
@@ -77,6 +81,7 @@ metrox-viewmodel-compose = { module = "dev.zacsweers.metro:metrox-viewmodel-comp
 metrox-android = { module = "dev.zacsweers.metro:metrox-android", version.ref = "metro" }
 
 # Kotlinx
+kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
 kotlinx-collections-immutable = { group = "org.jetbrains.kotlinx", name = "kotlinx-collections-immutable", version.ref = "kotlinx-collections-immutable" }
 kotlinx-serialization-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-core", version.ref = "kotlinx-serialization" }
 kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinx-serialization" }

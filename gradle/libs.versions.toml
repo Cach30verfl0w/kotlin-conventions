@@ -8,6 +8,7 @@ jvmTarget = "25"
 kotlinx-collections-immutable = "0.5.2" # https://github.com/Kotlin/kotlinx.collections.immutable/releases
 kotlinx-serialization = "1.11.0" # https://github.com/Kotlin/kotlinx.serialization/releases
 camerax = "1.6.2" # https://developer.android.com/jetpack/androidx/releases/camera
+opencv = "4.14.0" # https://github.com/opencv/opencv/releases
 zxing = "3.1.1" # https://github.com/zxing-cpp/zxing-cpp/releases
 metro = "1.4.5" # https://github.com/ZacSweers/metro/releases
 coil3 = "3.6.3" # https://github.com/coil-kt/coil/releases
@@ -86,6 +87,7 @@ androidx-camera-camera2 = { group = "androidx.camera", name = "camera-camera2", 
 androidx-camera-lifecycle = { group = "androidx.camera", name = "camera-lifecycle", version.ref = "camerax" }
 androidx-camera-view = { group = "androidx.camera", name = "camera-view", version.ref = "camerax" }
 zxing-android = { group = "io.github.zxing-cpp", name = "android", version.ref = "zxing" }
+opencv = { group = "org.opencv", name = "opencv", version.ref = "opencv" }
 
 [plugins]
 kotlin-conventions = { id = "net.cacheoverflow.kotlinconventions", version.ref = "kotlin-conventions" }

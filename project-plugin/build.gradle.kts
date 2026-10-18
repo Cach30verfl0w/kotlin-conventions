@@ -17,6 +17,7 @@
 
 plugins {
     `kotlin-dsl`
+    `maven-publish`
 }
 
 val javaVersion: Int = libs.versions.jvmTarget.get().toInt()

@@ -3,7 +3,7 @@ import org.gradle.api.publish.PublishingExtension
 import org.gradle.authentication.http.HttpHeaderAuthentication
 
 val baseVersion = rootProject.libs.versions.kotlin.conventions.get()
-val ciJobId = providers.environmentVariable("CI_JOB_ID").orNull
+val ciJobId = providers.environmentVariable("CI_PIPELINE_ID").orNull
 val ciCommitTag = providers.environmentVariable("CI_COMMIT_TAG").orNull
 val projectVersion = when {
     ciCommitTag != null -> baseVersion
